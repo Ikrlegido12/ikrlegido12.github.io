@@ -51,10 +51,42 @@ header p {
 }
 
 .header-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "title text button";
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
+}
+
+.header-top h1 {
+    grid-area: title;
+    min-width: 0;
+    margin: 0;
+}
+
+.header-top p {
+    grid-area: text;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.theme-toggle {
+    grid-area: button;
+}
+
+@media (max-width: 760px) {
+    .header-top {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title button"
+            "text text";
+        align-items: start;
+    }
+
+    .theme-toggle {
+        justify-self: end;
+    }
 }
 
 .theme-toggle {
@@ -327,7 +359,19 @@ footer {
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
-    color: rgba(217, 232, 255, 0.8);
+}
+
+.footer-links a {
+    color: rgba(217, 232, 255, 0.85);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--cyan);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
