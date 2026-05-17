@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>Ikrlegido12</h1>
+            <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        </div>
+        <p>Programador de plugins y mods para Minecraft, bots de Discord y aplicaciones web</p>
+    </header>
+
+    <main class="hero">
+        <section class="intro">
+            <div>
+                <h2>Hola, soy desarrollador web y Java</h2>
+                <p>Tengo conocimientos en JavaScript, HTML, CSS y Java.</p>
+                <div class="hero-actions">
+                    
+                    <a class="btn" href="pages/experiencia.html">Ver experiencia</a>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Diseño creativo" />
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <h2>Bots de Discord</h2>
+                <p>Desarrollo de bots para Discord con funcionalidades personalizadas y una experiencia de usuario fluida.</p>
+                <button class="btn" data-modal-target="modal-branding">Más detalles</button>
+            </article>
+            <article class="card">
+                <h2>Web</h2>
+                <p>Desarrollo de sitios responsivos, landing pages y portales con interacción moderna.</p>
+                <button class="btn" data-modal-target="modal-web">Más detalles</button>
+            </article>
+            <article class="card">
+                <h2>Plugins y mods para Minecraft</h2>
+                <p>Creación de plugins y mods para mejorar la experiencia de juego en Minecraft con funcionalidades innovadoras.</p>
+                <button class="btn" data-modal-target="modal-ux">Más detalles</button>
+            </article>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal-proyecto">
+        <div class="modal">
+            <button class="close-btn" aria-label="Cerrar">×</button>
+            <h3>Experiencia</h3>
+            <p>Tengo más de 5 años de experiencia en el desarrollo de software, especializado en JavaScript, HTML, CSS y Java.</p>
+            <p>Mi recorrido a través del mundo del desarrollo ha sido:</p>
+            <ul class="experience-list">
+                <li>
+                    <strong>2021-2023 | WorldParksMc</strong>
+                    <span>Network de Minecraft en la cual aprendí a desarrollar plugins. Fui el principal maintainer hasta que el proyecto cerró.</span>
+                </li>
+                <li>
+                    <strong>2023-2024 | CircoAC</strong>
+                    <span>Sucesor de WorldParksMc, con enfoque en calidad y experiencia de juego mejorada.</span>
+                </li>
+                <li>
+                    <strong>2024-actualidad | KILAM</strong>
+                    <span>Parte de KILAM, un grupo de desarrolladores que crean experiencias y proyectos para Minecraft.</span>
+                </li>
+            </ul>
+            <p>Además, he realizado proyectos propios más pequeños mientras crecían estas experiencias.</p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-branding">
+        <div class="modal">
+            <button class="close-btn" aria-label="Cerrar">×</button>
+            <h3>Branding</h3>
+            <p>Proceso de creación de marca con moodboard, tipografías y guía de estilo para mantener una identidad coherente.</p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-web">
+        <div class="modal">
+            <button class="close-btn" aria-label="Cerrar">×</button>
+            <h3>Web</h3>
+            <p>Desarrollo front-end con HTML, CSS y JavaScript. Sitios optimizados para velocidad y accesibilidad.</p>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-ux">
+        <div class="modal">
+            <button class="close-btn" aria-label="Cerrar">×</button>
+            <h3>UI/UX</h3>
+            <p>Investigación de usuarios, wireframes y prototipos para crear experiencias fluidas y agradables.</p>
+        </div>
+    </div>
+
+    <script defer src="index.js"></script>
+</body>
+</html>
